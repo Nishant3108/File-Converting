@@ -3,8 +3,14 @@ package com.example;
 import java.io.File;
 
 import org.jsoup.nodes.Element;
+import javafx.application.Application;
 
 public class Main {
+
+    public static void main(String[] args) {
+        // Launch the JavaFX application
+        Application.launch(UI.class, args);
+    }
 
     public void FileProcessor(File uploadedFile, File downloadFolder) {
         // Parse the uploaded HTML file

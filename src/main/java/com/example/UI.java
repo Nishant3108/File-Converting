@@ -199,9 +199,4 @@ public class UI extends Application {
         alert.setContentText(message);
         alert.showAndWait();
     }
-
-    public static void main(String[] args) {
-        // Launch the JavaFX application
-        launch(args);
-    }
 }
