@@ -42,7 +42,7 @@ public class UI extends Application {
         header.setStyle("-fx-background-color: green;"); // Set background color of header
 
         // Create the IVY TECH label
-        Label titleLabel = new Label("IVY TECH");
+        Label titleLabel = new Label("IVY TECH - File Converter");
         titleLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;");
 
         // Add label to the header
