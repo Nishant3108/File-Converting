@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.jsoup.nodes.Element;
@@ -16,11 +15,7 @@ public class CsvWriter {
      */
     public static void writeCSVFile(Element secondTable, String outputFilePath) {
         try {
-            // Create the CSV file at the specified location
-            ////////////////////////////////////////////////
-            /// ******************* the newCSVDocument ************ has the name of the file
-            /// that will be created
-            ///////////////////////////////////////////////
+            // Create a new CSV file writer
             FileWriter newCSVDocument = new FileWriter(outputFilePath);
             try (CSVPrinter csvPrinter = new CSVPrinter(newCSVDocument, CSVFormat.DEFAULT)) {
                 // Loop through each row of the second table

@@ -1,22 +1,19 @@
 package com.example;
 
 import java.io.File;
-
 import org.jsoup.nodes.Element;
 import javafx.application.Application;
 
 public class Main {
-
-    public static void main(String[] args) {
-        // Launch the JavaFX application
-        Application.launch(UI.class, args);
-    }
-
+    /*
+     * This method calls the methods in the ParseDocument and CsvWriter classes
+     * to process the uploaded HTML file and write it to a CSV file
+     */
     public void FileProcessor(File uploadedFile, File downloadFolder) {
         // Parse the uploaded HTML file
         ParseDocument parseDocument = new ParseDocument();
         Element secondTable = parseDocument.parseHtmlDocument(uploadedFile);
-
+        // Ensure the second table is not null
         if (secondTable != null) {
             // Define the output CSV file path
             String outputFilePath = downloadFolder.getAbsolutePath() + "/outputDocument.csv";
@@ -36,6 +33,15 @@ public class Main {
         } else {
             System.err.println("Error: Unable to parse the uploaded file.");
         }
+    }
+
+    /*
+     * This method launches the application
+     * 
+     */
+    public static void main(String[] args) {
+        // Launch the JavaFX application
+        Application.launch(UI.class, args);
     }
 
 }

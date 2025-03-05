@@ -1,7 +1,6 @@
 package com.example;
 
 import java.io.File; //handle file exception
-
 import javafx.application.Application; //for java application
 import javafx.event.ActionEvent;//for user actions
 import javafx.event.EventHandler;//handles events in JavaFX
