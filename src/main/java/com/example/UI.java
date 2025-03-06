@@ -164,14 +164,15 @@ public class UI extends Application {
                 Main fileProcessor = new Main();
 
                 // Process the main
-                fileProcessor.FileProcessor(uploadedFile, downloadFolder);
+                String resultMessage = fileProcessor.FileProcessor(uploadedFile, downloadFolder);
 
-                // Shows information alert when processing starts
-                showAlert(Alert.AlertType.INFORMATION, "Final Message",
-                        "Processing.....\nYour file has been downloaded to: " + downloadFolder.getAbsolutePath());
-            } else {
-                // Shows error alert if file or folder is missing
-                showAlert(Alert.AlertType.ERROR, "Missing Selection", "Missing file or download folder path.");
+                if (resultMessage.contains("Error")) {
+                    // Shows error alert if file processing fails
+                    showAlert(Alert.AlertType.ERROR, "Error", resultMessage);
+                } else {
+                    // Shows information alert when processing is successful
+                    showAlert(Alert.AlertType.INFORMATION, "Success", resultMessage);
+                }
             }
         });
         layout.getChildren().add(startButton);

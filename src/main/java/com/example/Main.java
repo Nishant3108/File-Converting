@@ -9,7 +9,7 @@ public class Main {
      * This method calls the methods in the ParseDocument and CsvWriter classes
      * to process the uploaded HTML file and write it to a CSV file
      */
-    public void FileProcessor(File uploadedFile, File downloadFolder) {
+    public String FileProcessor(File uploadedFile, File downloadFolder) {
         // Parse the uploaded HTML file
         ParseDocument parseDocument = new ParseDocument();
         Element secondTable = parseDocument.parseHtmlDocument(uploadedFile);
@@ -29,9 +29,12 @@ public class Main {
 
             // Write the parsed data to the CSV file
             CsvWriter.writeCSVFile(secondTable, outputFilePath);
-            System.out.println("File processed and saved to: " + outputFilePath);
+
+            // Return a message saying it was successful
+            // or that it was unsuccessful
+            return "File processed and saved to: " + outputFilePath;
         } else {
-            System.err.println("Error: Unable to parse the uploaded file.");
+            return "Error: Unable to parse the uploaded file.";
         }
     }
 
