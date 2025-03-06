@@ -26,7 +26,7 @@ The application has a simple and user-friendly graphical interface (GUI) that is
 
 # Dependencies
 
-JSOUP - This is a library for easily parsing HTML files
+JSOUP - This is a library for easily parsing HTML files  
 Apache commons - This is a library to easily write files to CSV
 
 # Instructions to run the file
