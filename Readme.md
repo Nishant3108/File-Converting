@@ -15,9 +15,6 @@ The application has a simple and user-friendly graphical interface (GUI) that is
 -The user interface prevents the user from downloading the file to a folder that does not exist.
 1. Try to download to a folder that does not exist
 
--If the user clicks the start button before uploading the file or choosing the download folder the GUI will show an error.
-1. Try to run the program through the user interface without uploading a file first
-
 -If the user enters an html file with a second table the program will convert that file into a CSV that file that can be downloaded onto their machine
 1. Upload the obfuscated_course_report.html 
 2. Choose a place to download it then hit start
