@@ -6,16 +6,13 @@ The application has a simple and user-friendly graphical interface (GUI) that is
 
 # Test senarios 
 
--The file converter will not work if the HTML file dosn't contain a second table because it only converts the information in the second table to CSV.
-1. Try to upload the badTestFile.html example and it will show you and error through the user interface because the file does not have a second table to parse
+The file converter will not work if the HTML file dosn't contain a second table because it only converts the information in the second table to CSV. - Try to upload the badTestFile.html example and it will show you and error through the user interface because the file does not have a second table to parse
 
--The user interface prevents the user from uploading any file that is not .html.
-1. Try to upload a file that is not .html
+The user interface prevents the user from uploading any file that is not .html. - Try to upload a file that is not .html
 
--The user interface prevents the user from downloading the file to a folder that does not exist.
-1. Try to download to a folder that does not exist
+The user interface prevents the user from downloading the file to a folder that does not exist. - Try to download to a folder that does not exist
 
--If the user enters an html file with a second table the program will convert that file into a CSV that file that can be downloaded onto their machine
+If the user enters an html file with a second table the program will convert that file into a CSV that file that can be downloaded onto their machine
 1. Upload the obfuscated_course_report.html 
 2. Choose a place to download it then hit start
 3. Finally view the downloaded CSV file titled "outputDocument.csv"
